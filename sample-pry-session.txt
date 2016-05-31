@@ -1,0 +1,49 @@
+EXAPLE PRY SESSION:
+
+From terminal:
+
+------
+
+[15:18:44] (master) pry-example
+$  ruby index.rb 
+
+From: /Users/kevinmircovich/Documents/code/Ruby/pry-example/index.rb @ line 4 Object#output_full_name:
+
+    3: def output_full_name(first_name, last_name)
+ => 4:   binding.pry
+    5:   # When you run this script, form the terminal, the program will pause where you put the pry.
+    6:   # From here you can see what your variables are try adding them together manipulate them, etc.
+    7:   # Then exit and paste over the code you want.
+    8:   # It makes development faster because you dont need to run the whole script and output to the terminal to see that values inside here.
+    9: end
+
+[1] pry(main)> first_name
+=> "kevin"
+[2] pry(main)> last_name
+=> "mircovich"
+[3] pry(main)> first_name + " " + last_name
+=> "kevin mircovich"
+[4] pry(main)> first_name + " " + last_name.upcase
+=> "kevin MIRCOVICH"
+[5] pry(main)> first_name + " " + last_name.capitalize
+=> "kevin Mircovich"
+[6] pry(main)> first_name.capitaliez + " " + last_name.capitalize
+NoMethodError: undefined method `capitaliez' for "kevin":String
+from (pry):6:in `output_full_name'
+[7] pry(main)> first_name.capitalize + " " + last_name.capitalize
+=> "Kevin Mircovich"
+[8] pry(main)> full_name = first_name + " " + last_name
+=> "kevin mircovich"
+[9] pry(main)> full_name.titalize
+NoMethodError: undefined method `titalize' for "kevin mircovich":String
+from (pry):9:in `output_full_name'
+[10] pry(main)> full_name.titlize
+NoMethodError: undefined method `titlize' for "kevin mircovich":String
+from (pry):10:in `output_full_name'
+[11] pry(main)> full_name = first_name.capitalize + " " + last_name.capitalize
+=> "Kevin Mircovich"
+[12] pry(main)> exit
+[15:20:32] (master) pry-example
+$  
+
+------
